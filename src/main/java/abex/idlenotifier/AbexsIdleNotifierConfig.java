@@ -18,4 +18,14 @@ public interface AbexsIdleNotifierConfig extends Config
 	{
 		return Notification.ON;
 	}
+
+  @ConfigItem(
+    keyName = "notificationMessage",
+    name = "Notification Message",
+    description = "The message shown when idle notification is triggered."
+  )
+  default String notificationMessage()
+  {
+    return "you not busy smorc";
+  }
 }
